@@ -1,0 +1,20 @@
+{
+  "name": "node-js-express-pug-dating-app-coded-encounters-3",
+  "description": "## A dating website using ExpressJS and Pug ---",
+  "main": "app.js",
+  "authors": [
+    "Peter Garrido <peter.garrido57@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/nss-day-cohort-17/node-js-express-pug-dating-app-coded-encounters-3",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
