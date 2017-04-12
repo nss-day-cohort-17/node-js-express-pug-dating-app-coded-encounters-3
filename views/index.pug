@@ -1,0 +1,29 @@
+extends partials/layout-homepage.pug
+  block content
+    h1 Coded Encounters
+      h3 Finding love for the heartless
+        img.logo(src="../public/img/think i am cute.jpg" alt="logo image")
+      form.form-inline(method='POST')
+        .form-group
+          .question I am looking for love
+            .checkbox
+              label.label
+                input( type='checkbox') Yes
+                input( type='checkbox') No
+          .question I believe in love without a heart
+            .checkbox
+              label.label
+                input( type='checkbox') Yes
+                input( type='checkbox') No
+          .question This is the third question about things
+            .checkbox
+              label.label
+                input( type='checkbox') Yes
+                input( type='checkbox') No
+          .question This is the fourth question about things
+            .checkbox
+              label.label
+                input( type='checkbox') Yes
+                input( type='checkbox') No
+          .form__submit
+            input.btn.btn-success.btn-lg(type='submit' value='Submit')
