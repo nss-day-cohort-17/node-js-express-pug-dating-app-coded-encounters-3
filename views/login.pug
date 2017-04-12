@@ -1,0 +1,20 @@
+h2 Login
+  .form-group(class={ active: page === 'Login' || page === 'Register' })
+     label( for='password') Password
+      input.form-control#password(
+          type='password'
+          name='password'
+          placeholder='**********'
+          required
+          )
+  .form-group
+      label( for='email') Email Address
+      input.form-control#email( type='email' name='email' placeholder='you@example.com')
+  .contact-form__submit
+    a.btn.btn-danger.btn-lg(href='/homepage') Cancel
+    input.btn.btn-success.btn-lg(type='submit' value='Submit')
+
+
+
+//- put at top when created:
+  extends partials/layout-homepage.pug
