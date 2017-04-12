@@ -5,14 +5,21 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 // const flash = require('express-flash');
+
 // const session = require('express-session')
 // const passport = require('passport');
+const session = require('express-session')
+const passport = require('passport');
+
 // const KnexSessionStore = require('connect-session-knex')(session);
 const { knex } = require('./db/database');
 const routes = require('./routes/')
 
 // Pug
 app.set('view engine', 'pug');
+app.locals.appname = "💞 Coded Encounters 💞";
+app.locals.errors = {};
+app.locals.body = {};
 
 // Global variables will go here
 // ie app.locals.example = anything
