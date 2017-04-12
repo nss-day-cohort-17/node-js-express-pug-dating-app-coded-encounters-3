@@ -13,6 +13,9 @@ const routes = require('./routes/')
 
 // Pug
 app.set('view engine', 'pug');
+app.locals.appname = "💞 Coded Encounters 💞";
+app.locals.errors = {};
+app.locals.body = {};
 
 // Global variables will go here
 // ie app.locals.example = anything
