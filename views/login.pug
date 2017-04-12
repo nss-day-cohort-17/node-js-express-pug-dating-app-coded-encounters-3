@@ -1,3 +1,7 @@
+include partials/navbar.pug
+
+block content
+
 h2 Login
   .form-group
       label( for='email') Email Address
@@ -15,9 +19,3 @@ h2 Login
     input.btn.btn-success.btn-lg(type='submit' value='Submit')
 
     a.btn.btn-danger.btn-lg(href='/create-profile') I want to create a profile
-
-
-
-
-//- put at top when created:
-  extends partials/layout-homepage.pug

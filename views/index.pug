@@ -1,4 +1,9 @@
-h1=#appname
+
+include partials/navbar.pug
+
+block content
+
+h1=appname
   h3 Finding love for the heartless
       img.logo(src="../public/img/dateme.jpg" alt="logo image")
   form.form-inline(method='POST')
@@ -30,8 +35,3 @@ h1=#appname
           .form__submit
             input.btn.btn-success.btn-lg(type='submit' value='Submit')
             a.input.btn.btn-primary.btn-lg(href='/myProfile',) I want to see my options first!
-
-
-
-//- extends partials/layout-homepage.pug
-//- block content
