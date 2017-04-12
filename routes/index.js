@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const router = express();
+const router = Router();
 
 
 router.use(require('./create-profile'));
