@@ -13,4 +13,15 @@ const Currentuser = bookshelf.Model.extend({
 
 })
 
-module.exports = { User, Currentuser };
+const returnCurrentUser = () => {
+  // select * from `currentuser`
+  return Currentuser.forge().fetch()
+  .then(function(user) {
+    // outputs 'Slaughterhouse Five'
+    // console.log(model.get('user'));
+    console.log("this is the user", user.toJSON())
+    return user
+  });
+}
+
+module.exports = { User, Currentuser, returnCurrentUser };

@@ -17,9 +17,18 @@ block content
   h1 hey and stuff
     h1=name
     h1=age
-  .card.card-outline-primary.mb-3.text-center
-    .card-block  heeey
-      blockquote.card-blockquote
+    h2 hey things
+
+    block content
+  .heading
+    h3 Create a Profile
+  .profile-form
+    form(method="POST")
+      .profile-form_submit
+        button.btn.btn.danger.btn-lg See The current user
+  //- .card.card-outline-primary.mb-3.text-center
+  //-   .card-block  heeey
+  //-     blockquote.card-blockquote
         //- if page === "all"
         //-   include partials/display-all-users
         //- if page === "liked"
