@@ -20,7 +20,7 @@ const returnCurrentUser = () => {
     // outputs 'Slaughterhouse Five'
     // console.log(model.get('user'));
     console.log("this is the user", user.toJSON())
-    return user
+    return user.toJSON();
   });
 }
 

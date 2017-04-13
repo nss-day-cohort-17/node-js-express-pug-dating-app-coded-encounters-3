@@ -26,6 +26,14 @@ block content
     form(method="POST")
       .profile-form_submit
         button.btn.btn.danger.btn-lg See The current user
+  if user
+    h3=user.name
+    p=user.age
+    p=user.description
+    p=user.hobbies
+    p=user.phone
+    p=user.email
+    p=user.date_joined
   //- .card.card-outline-primary.mb-3.text-center
   //-   .card-block  heeey
   //-     blockquote.card-blockquote
