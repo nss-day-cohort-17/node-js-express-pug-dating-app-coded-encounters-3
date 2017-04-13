@@ -1,0 +1,24 @@
+
+extends partials/layout-homepage.pug
+
+//- name, age, photo, description, likes, dislikes
+//- product card of user
+.card
+  img.card-img-top(src= imgurl, alt='profile image')
+  .card-block
+    h4.card-title= profileName
+    p.card-text=userDescription
+
+    p.card-text=userLikes
+    p.card-text=userDislikes
+      small.text-muted=userAge
+
+
+.card.card-outline-primary.mb-3.text-center
+  .card-block
+    blockquote.card-blockquote
+      if page === "all"
+        include partials/display-all-users
+      if page === "liked"
+        include partials/display-all-users
+  //- this will display all users partial/ or liked users partial
