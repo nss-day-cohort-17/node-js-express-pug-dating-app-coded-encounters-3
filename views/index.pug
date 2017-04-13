@@ -4,34 +4,33 @@ block content
 
     h1=appname
     h3 Finding love for the heartless
-        img.logo(src="/img/dateme.jpg" alt="logo image")
+    img.logo(src="/img/dateme.jpg" alt="logo image")
     form.form-inline(method='POST')
       .form-group
           .question I am looking for love
-
             .checkbox
               label Yes
-              input( type='checkbox' checked)
+              input( type='checkbox')
               label No
               input( type='checkbox')
-            .question I believe in love without a heart
-              .checkbox
-                label Yes
-                input( type='checkbox' checked)
-                label No
-                input( type='checkbox')
-            .question This is the third question about things
-              .checkbox
-                label Yes
-                input( type='checkbox' checked)
-                label No
-                input( type='checkbox')
-            .question This is the fourth question about things
-              .checkbox
-                label Yes
-                input( type='checkbox' checked)
-                label No
-                input( type='checkbox')
-            .form__submit
-              input.btn.btn-success.btn-lg(type='submit' value='Submit')
-              a.input.btn.btn-primary.btn-lg(href='/myProfile',) I want to see my options first!
+          .question I believe in love without a heart
+            .checkbox
+              label Yes
+              input( type='checkbox')
+              label No
+              input( type='checkbox')
+          .question This is the third question about things
+            .checkbox
+              label Yes
+              input( type='checkbox')
+              label No
+              input( type='checkbox')
+          .question This is the fourth question about things
+            .checkbox
+              label Yes
+              input( type='checkbox')
+              label No
+              input( type='checkbox')
+          .form__submit
+            input.btn.btn-success.btn-lg(type='submit' value='Submit')
+            a.input.btn.btn-primary.btn-lg(href='/myProfile',) I want to see my options first!
