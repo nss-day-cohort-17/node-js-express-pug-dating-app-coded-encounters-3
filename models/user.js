@@ -17,8 +17,6 @@ const returnCurrentUser = () => {
   // select * from `currentuser`
   return Currentuser.forge().fetch()
     .then(function(user) {
-      // outputs 'Slaughterhouse Five'
-      // console.log(model.get('user'));
       console.log("this is the user", user.toJSON())
       return user.toJSON();
     });
@@ -42,9 +40,9 @@ const checkforCurrentUser = (email) => {
   return Currentuser.forge().fetch().then((user) => {
     //does currentuser table email match login email
     if (user.email === email) {
-      returnUserFromProfileTable().then((user) => {
+      returnUserFromProfileTable().then((profileUser) => {
         //set currentuser table to the user who just 'logged in'
-        Currentuser.forge(user).save()
+        Currentuser.forge(profileUser).save()
           .then((user) => {
             console.log(user.toJSON())
           })

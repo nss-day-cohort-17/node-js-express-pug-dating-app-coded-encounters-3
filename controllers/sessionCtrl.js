@@ -19,4 +19,6 @@ module.exports.getuser = (req,res,next) => {
   })
 }
 
-// module.exports.checkuser
+// module.exports.checkuser = (req,res,next) => {
+//   return
+// }
