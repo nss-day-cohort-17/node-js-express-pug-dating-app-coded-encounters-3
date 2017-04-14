@@ -4,19 +4,25 @@ block content
 
 h2 Login
   .form-group
+
     form(method="POST")
       label( for='email') Email Address
       input.form-control#email( type='email' name='email' placeholder='you@example.com')
       label( for='password') Password
+
+    label( for='email') Email Address
+      input.form-control#email(type='email' name='email' placeholder='you@example.com')
+    label( for='password') Password
+    
       input.form-control#password(
-          type='password'
-          name='password'
-          placeholder='**********'
-          required
-          )
+        type='password'
+        name='password'
+        placeholder='**********'
+        required
+        )
   .contact-form__submit
-    a.btn.btn-danger.btn-lg(href='/homepage') Cancel
+    a.btn.btn-danger.btn-md(href='/homepage') Cancel
 
-    input.btn.btn-success.btn-lg(type='submit' value='Submit')
+    input.btn.btn-success.btn-md(type='submit' value='Submit')
 
-    a.btn.btn-primary.btn-lg(href='/create-profile') I want to create a profile
+    a.btn.btn-primary.btn-md(href='/create-profile') I want to create a profile
