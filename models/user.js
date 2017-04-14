@@ -36,7 +36,6 @@ const returnUserFromProfileTable = (email) => {
 
 //validates user email then sets currentuser table to that user
 const checkforCurrentUser = (email) => {
-
   return Currentuser.forge().fetch().then((user) => {
     //does currentuser table email match login email
     if (user.email === email) {
@@ -44,6 +43,7 @@ const checkforCurrentUser = (email) => {
         //set currentuser table to the user who just 'logged in'
         Currentuser.forge(profileUser).save()
           .then((user) => {
+            return user.toJSON()
             console.log(user.toJSON())
           })
       })
@@ -52,4 +52,4 @@ const checkforCurrentUser = (email) => {
   })
 }
 
-module.exports = { User, Currentuser, returnCurrentUser };
+module.exports = { User, Currentuser, returnCurrentUser, checkforCurrentUser };
