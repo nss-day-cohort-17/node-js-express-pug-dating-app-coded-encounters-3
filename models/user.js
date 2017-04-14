@@ -1,6 +1,6 @@
 'use strict'
 
-const { bookshelf } = require('../db/database');
+const { bookshelf, knex } = require('../db/database');
 // const { compare } = require('bcryptjs'); -AUTH PRIORITY
 
 const User = bookshelf.Model.extend({
@@ -28,10 +28,10 @@ const returnUserFromProfileTable = (email) => {
   return knex('profile').where('email', email)
     .then((user) => {
       console.log("successful return from user ")
-      console.log('returnUserFromProfileTable', user.toJSON())
-      return user.toJSON();
+      console.log('returnUserFromProfileTable', user)
+      return user;
     })
-
+    .catch((err) => {console.log("err from catch", err)})
 
 }
 
@@ -45,14 +45,20 @@ const checkforCurrentUser = (email) => {
     //does currentuser table email match login email
     console.log("successful fetch from current user")
     if (user.email === email) {
-      console.log("email matched")
-      returnUserFromProfileTable(email).then((profileUser) => {
-        console.log("found user in profile table")
+      console.log("email matched", email)
+      returnUserFromProfileTable(email)
+      .then((profileUser) => {
+        console.log("found user in profile table",  profileUser[0])
+          user = profileUser[0].anonymous
+          user.id = null
         //set currentuser table to the user who just 'logged in'
-        Currentuser.forge(profileUser).save()
+        Currentuser.forge(user).save()
           .then((user) => {
             return user.toJSON()
             console.log(user.toJSON())
+          })
+          .catch((err) => {
+            console.log("err from last catch", err)
           })
       })
     }
