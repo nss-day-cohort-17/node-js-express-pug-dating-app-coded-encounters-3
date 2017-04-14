@@ -20,11 +20,15 @@ module.exports.getuser = (req,res,next) => {
 }
 
 module.exports.checkuser = (req, res, next) => {
-	return checkforCurrentUser()
+  console.log("inside check user")
+  let email = req.body.email
+	return checkforCurrentUser(email)
 		.then((user) => { // if user redirect to myProfile if no user redirect to login page
 			if (user) {
+        console.log("sending to myProfile")
 				res.redirect('/myProfile')
 			} else {
+        console.log("check user else rendering login")
 				res.render('login', {
 					msg: 'Email or Password is incorrect.'
 				})

@@ -24,8 +24,10 @@ const returnCurrentUser = () => {
 
 //checks profile table for matching email address
 const returnUserFromProfileTable = (email) => {
+  console.log("inside return user", email)
   return knex('profile').where('email', email)
     .then((user) => {
+      console.log("successful return from user ")
       console.log('returnUserFromProfileTable', user.toJSON())
       return user.toJSON();
     })
@@ -36,10 +38,16 @@ const returnUserFromProfileTable = (email) => {
 
 //validates user email then sets currentuser table to that user
 const checkforCurrentUser = (email) => {
+  console.log("starting check for current user")
   return Currentuser.forge().fetch().then((user) => {
+    user = user.toJSON()
+    console.log("this is the fetch user", user.email)
     //does currentuser table email match login email
+    console.log("successful fetch from current user")
     if (user.email === email) {
-      returnUserFromProfileTable().then((profileUser) => {
+      console.log("email matched")
+      returnUserFromProfileTable(email).then((profileUser) => {
+        console.log("found user in profile table")
         //set currentuser table to the user who just 'logged in'
         Currentuser.forge(profileUser).save()
           .then((user) => {
