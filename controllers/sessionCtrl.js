@@ -5,7 +5,7 @@ module.exports.show =(req,res) => {
 }
 
 module.exports.getuser = (req,res,next) => {
-  console.log('firing the stuff')
+  console.log('firing getuser')
   return returnCurrentUser()
   .then((user) => {
     console.log("sessionCtrl user", user)
@@ -18,3 +18,5 @@ module.exports.getuser = (req,res,next) => {
 
   })
 }
+
+// module.exports.checkuser
