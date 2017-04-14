@@ -1,6 +1,7 @@
-
 extends partials/layout-homepage.pug
 
+block content
+  
 //- name, age, photo, description, likes, dislikes
 //- product card of user
 .card
@@ -17,8 +18,17 @@ extends partials/layout-homepage.pug
 .card.card-outline-primary.mb-3.text-center
   .card-block
     blockquote.card-blockquote
-      if page === "all"
+      //- if page === "all"
         include partials/display-all-users
-      if page === "liked"
+      //- if page === "liked"
         include partials/display-all-users
   //- this will display all users partial/ or liked users partial
+  
+  //- #rating1.rating
+  //- button.btn.btn-default.like Like
+  //- |  
+  //- span.glyphicon.glyphicon-heart 0
+  //- |  
+  //- button.btn.btn-default.dislike Dislike
+  //- |  
+  //- span.icomoon.icon-heart-broken 0
