@@ -1,7 +1,7 @@
 'use strict';
 
 exports.up = function(knex, Promise) {
-  return knex.schema.createTable('profile', (table) => {
+  return knex.schema.createTable('currentuser', (table) => {
     table.increments();
     table.string('name').notNullable();
     table.integer('age').notNullable();
@@ -14,4 +14,4 @@ exports.up = function(knex, Promise) {
   })
 };
 
-exports.down = (knex, Promise) => knex.schema.dropTable('profile')
+exports.down = (knex, Promise) => knex.schema.dropTable('currentuser')

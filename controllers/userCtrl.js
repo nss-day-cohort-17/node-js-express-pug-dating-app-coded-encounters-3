@@ -1,9 +1,11 @@
 'use strict';
 
-const User = require('../models/user')
-
-module.exports.create = ({body: {name, age, photo, description, hobbies, phone, email}}, res) => {
+const {User, returnCurrentUser } = require('../models/user')
+//put photo back in body object after age
+module.exports.create = ({body: {name, age, description, hobbies, phone, email}}, res) => {
   .then() => {
-    res.redirect('myProfile')
+    res.redirect('myProfile') //this works //
+
+
   }
 }
