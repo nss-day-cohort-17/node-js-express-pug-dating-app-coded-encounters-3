@@ -2,6 +2,20 @@ extends partials/layout-homepage.pug
 
 block content
 
+  .heading
+    h3 Create a Profile
+  .profile-form
+    form(method="POST")
+      .profile-form_submit
+        button.btn.btn.danger.btn-lg See The current user
+    if user
+      h3=user.name
+      p=user.age
+      p=user.description
+      p=user.hobbies
+      p=user.phone
+      p=user.email
+      p=user.date_joined
 
 
 
@@ -103,20 +117,20 @@ block content
 
 //- name, age, photo, description, likes, dislikes
 //- product card of user
-.card
-  img.card-img-top(src= imgurl, alt='profile image')
-  .card-block
-    h4.card-title= profileName
-    p.card-text=userDescription
+//- .card
+//-   img.card-img-top(src= imgurl, alt='profile image')
+//-   .card-block
+//-     h4.card-title= profileName
+//-     p.card-text=userDescription
+//- 
+//-     p.card-text=userLikes
+//-     p.card-text=userDislikes
+//-       small.text-muted=userAge
 
-    p.card-text=userLikes
-    p.card-text=userDislikes
-      small.text-muted=userAge
-
-
-.card.card-outline-primary.mb-3.text-center
-  .card-block
-    blockquote.card-blockquote
+//- 
+//- .card.card-outline-primary.mb-3.text-center
+//-   .card-block
+//-     blockquote.card-blockquote
       //- if page === "all"
         include partials/display-all-users
       //- if page === "liked"
@@ -131,4 +145,3 @@ block content
   //- button.btn.btn-default.dislike Dislike
   //- |  
   //- span.icomoon.icon-heart-broken 0
-

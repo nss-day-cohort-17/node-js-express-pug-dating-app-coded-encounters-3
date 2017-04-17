@@ -1,5 +1,7 @@
 //- extends partials/layout-homepage.pug
 
+include partials/navbar.pug
+
 block content
   .heading
     h3 Create a Profile
@@ -50,7 +52,7 @@ block content
         input.form-control#phone(
           type='tel'
           name='phone'
-          placeholder='5555555555'
+          placeholder='(555)555-5555'
           required
         )
       .form-group

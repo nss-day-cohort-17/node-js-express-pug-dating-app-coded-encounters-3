@@ -3,8 +3,6 @@ const { Router } = require('express');
 const { show, getuser } = require('../controllers/sessionCtrl');
 const {User, returnCurrentUser } = require('../models/user')
 
-const { show } = require('../controllers/sessionCtrl');
-
 const router = Router();
 
 

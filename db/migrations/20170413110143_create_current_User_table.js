@@ -2,7 +2,7 @@
 
 exports.up = function(knex, Promise) {
   return knex.schema.createTable('currentuser', (table) => {
-    table.increments();
+    table.integer('id');
     table.string('name').notNullable();
     table.integer('age').notNullable();
     // table.string('photo').notNullable();
