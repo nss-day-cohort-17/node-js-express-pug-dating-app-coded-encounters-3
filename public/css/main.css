@@ -1,0 +1,60 @@
+]li {
+	margin-left: 50px;
+}
+
+body {
+	padding-top: 50px;
+}
+
+h1, h3, h2{
+  text-align: center;
+}
+
+h2, h1, h3 {
+	padding-top: 30px;
+}
+
+img {
+	margin-left: 37%;
+}
+
+.form-group {
+	/*margin-left: 35%;*/
+	text-align: center;
+	/*padding-top: 30px;*/
+}
+
+.form__submit {
+	padding-top: 30px;
+	padding-left: 105px;;
+}
+
+.checkbox {
+	margin-left: 30px;
+}
+
+.question {
+    width: 85%;
+    border: 3px solid pink;
+    padding: 10px;
+		margin-top: 30px;
+		margin-left: 90px;
+		text-align: center;
+}
+
+.form-inline {
+	margin-left: 25%
+}
+
+#name, #age, #description, #email, #hobbies, #phone, #email, #password {
+	width: 85%;
+	border: 3px solid pink;
+	padding: 10px;
+	margin-top: 30px;
+	margin-left: 90px;
+	text-align: center;
+}
+
+.profile-form_submit {
+	margin-left: 46%;
+}
